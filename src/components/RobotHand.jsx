@@ -20,7 +20,7 @@ function debounce(fn, ms) {
 
 
 function RobotHand() {
-    const [robotHandSrc, setRobotHandSrc] = useState(robotFull)
+    const [robotHandSrc, setRobotHandSrc] = useState(window.innerWidth > 1700 || (window.innerWidth < 1060 && window.innerWidth > 718) ? robotFull : robot)
     useEffect(() => {
         const debouncedHandleResize = debounce(function handleResize() {
             setRobotHandSrc(window.innerWidth > 1700 || (window.innerWidth < 1060 && window.innerWidth > 718) ? robotFull : robot)

@@ -5,14 +5,13 @@ import { Navbar, Hero, Stats, Business, Billing, CardDeal, Testimonials, Clients
 import { MouseParallaxContainer } from "react-parallax-mouse";
 
 
-
 function App() {
   return (
     <MouseParallaxContainer globalFactorX={0.1} globalFactorY={0.1}>
-    <div className='bg-primary w-full overflow-hidden'>
+    <div className='bg-primary w-full overflow-hidden '>
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          <Navbar />
+          <Navbar/>
         </div>
       </div>
 
@@ -24,7 +23,7 @@ function App() {
 
       <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          <Stats />
+          <Stats/>
           <Business />
           <Billing />
           <CardDeal />

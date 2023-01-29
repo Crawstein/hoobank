@@ -5,8 +5,8 @@ function Stats() {
   return (
     <section className={`flex items-center justify-center flex-row flex-wrap sm:mb-20 mb-6`}>
       {stats.map((stat) => (
-        <div className={`flex items-center justify-between`}>
-          <div key={stat.id} className={`flex-1 flex justify-center items-center flex-row m-3`}>
+        <div key={stat.id} className={`flex items-center justify-between`}>
+          <div className={`flex-1 flex justify-center items-center flex-row m-3`}>
             <h4 className='font-poppins font-semibold xd:text-[40px] text-[30px] xd:leading-[53px] leading-[43px] text-white'>
               {stat.value}
             </h4>
