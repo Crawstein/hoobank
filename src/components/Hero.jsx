@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styles from '../styles'
-import { discount, robot, robotFull } from '../assets'
+import { discount } from '../assets'
 import { GetStarted, RobotHand } from '../components'
 
 function Hero() {

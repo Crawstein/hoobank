@@ -1,6 +1,6 @@
 import React from 'react'
 import { BillingParallax } from '../components'
-import { apple, bill, google } from '../assets'
+import { apple, google } from '../assets'
 import styles, { layout } from '../styles'
 
 function Billing() {

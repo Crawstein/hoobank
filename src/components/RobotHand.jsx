@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { sphereLarge, sphereMedium, sphereSmall, cardLayerTop, cardLayerCenter, cardLayerBottom, cardTopBg, cardTopBlockBg, cardTopBlockBgEmpty } from '../assets'
+import { sphereLarge, sphereMedium, sphereSmall, cardTopBg, cardTopBlockBg, cardTopBlockBgEmpty } from '../assets'
 
 import styles from '../styles'
 import { robot, robotFull, logo } from '../assets'
@@ -20,26 +20,18 @@ function debounce(fn, ms) {
 
 
 function RobotHand() {
-    const [dimensions, setDimensions] = useState({
-        height: window.innerHeight,
-        width: window.innerWidth
-    })
     const [robotHandSrc, setRobotHandSrc] = useState(robotFull)
     useEffect(() => {
         const debouncedHandleResize = debounce(function handleResize() {
-            setDimensions({
-                height: window.innerHeight,
-                width: window.innerWidth
-            })
+            setRobotHandSrc(window.innerWidth > 1700 || (window.innerWidth < 1060 && window.innerWidth > 718) ? robotFull : robot)
         }, 100)
-        setRobotHandSrc(window.innerWidth > 1700 || (window.innerWidth < 1060 && window.innerWidth > 718) ? robotFull : robot)
         window.addEventListener('resize', debouncedHandleResize)
 
         return _ => {
             window.removeEventListener('resize', debouncedHandleResize)
 
         }
-    })
+    },[])
 
     return (
         <div className={`flex-1 flex ${styles.flexCenter} md:my-0 mx-auto my-10 relative w-[700px] min-h-[700px] pointer-events-none`}>

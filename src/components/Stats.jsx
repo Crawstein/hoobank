@@ -1,6 +1,5 @@
 import React from 'react'
 import { stats } from '../constants'
-import styles from '../styles'
 
 function Stats() {
   return (
